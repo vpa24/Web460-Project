@@ -9,8 +9,7 @@
     <link href="../Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
-        <form id="form1" runat="server">
+    <form id="form1" runat="server">
         <div class="row">
             <div class="col-2">
                 <asp:Label ID="labelCustomer" runat="server" Text="Customer Name"></asp:Label>
@@ -58,6 +57,5 @@
               <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
          </div>
     </form>
-    </div>
 </body>
 </html>
