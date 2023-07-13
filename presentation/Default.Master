@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.Master.cs" Inherits="Web460_Week_1.presentation.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Page Title</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <a href="../Content/bootstrap-grid.min.css.map">../Content/bootstrap-grid.min.css.map</a>
+</head>
+<body>
+    <div class="container-fluid">
+         <nav class="navbar navbar-expand-lg bg-primary">
+          <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/index.aspx"></asp:HyperLink>
+            </li>
+            <li class="nav-item">
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/presentation/CheckOut.aspx"></asp:HyperLink>
+            </li>
+      </ul>
+    </div>
+ </nav>
+<div class="row p-5">
+    <div class="col-3">
+        <asp:ContentPlaceHolder ID="pageImage" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <div class="col-9">
+        <asp:ContentPlaceHolder ID="pageInformation" runat="server"></asp:ContentPlaceHolder>
+    </div>
+</div>
+    <form id="mainForm" runat="server">
+        <div class="row">
+            <div class="col-10 mt-1">
+                <section >
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
+            </div>
+        </div>
+        <div class="col-2">
+            <h1>Contact Us:</h1>
+            <div class="phone">Phone:</div>
+            <a href="mailto:vuphuonganh020497@gmail.com">Send Email</a>
+        </div>
+    </form>
+        <footer>
+            <p>Copyright Phuong Anh Vu &copy; 2023 all rights reserved</p>
+               
+        </footer>
+ </div>
+</body>
+</html>
