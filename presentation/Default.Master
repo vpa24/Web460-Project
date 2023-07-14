@@ -5,30 +5,41 @@
 <html>
 <head runat="server">
     <title>Page Title</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-grid.min.css.map" rel="stylesheet" />
+    <link href="../styles/myStyles.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <a href="../Content/bootstrap-grid.min.css.map">../Content/bootstrap-grid.min.css.map</a>
 </head>
 <body>
-    <div class="container-fluid">
-         <nav class="navbar navbar-expand-lg bg-primary">
-          <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/index.aspx"></asp:HyperLink>
-            </li>
-            <li class="nav-item">
-                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/presentation/CheckOut.aspx"></asp:HyperLink>
-            </li>
+        <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+      <asp:HyperLink runat="server" CssClass="navbar-brand" NavigateUrl="~/index.aspx">
+          Wavecrest
+      </asp:HyperLink>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+           <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/index.aspx">
+               <asp:Image runat="server" Width="20px" CssClass="img-fluid" ImageUrl="~/presentation/images/home.png" />
+               Home
+           </asp:HyperLink>
+        </li>
+        <li class="nav-item">
+            <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/presentation/CheckOut.aspx">
+                <asp:Image runat="server" Width="20px" CssClass="img-fluid" ImageUrl="~/presentation/images/checkout.png" />
+                Checkout
+            </asp:HyperLink>
+        </li>
       </ul>
     </div>
- </nav>
-<div class="row p-5">
+  </div>
+</nav>
+<div class="container-fluid">
+    <div class="row p-5 bg-success">
     <div class="col-3">
         <asp:ContentPlaceHolder ID="pageImage" runat="server"></asp:ContentPlaceHolder>
     </div>
@@ -37,24 +48,28 @@
     </div>
 </div>
     <form id="mainForm" runat="server">
-        <div class="row">
-            <div class="col-10 mt-1">
+        <div class="row mt-1">
+            <div class="col-10">
                 <section >
                     <asp:ContentPlaceHolder ID="mainContent" runat="server">
                     </asp:ContentPlaceHolder>
                 </section>
             </div>
+          <div class="col-2 px-0">
+            <section>
+                <h1>Contact Us:</h1>
+                <div class="phone">
+                    <asp:Image runat="server" Width="20px" CssClass="img-fluid" ImageUrl="~/presentation/images/phone.png" /> Phone:<a href="tel:9168799983">916-879-9983</a></div>
+                    <asp:Image runat="server" Width="20px" CssClass="img-fluid" ImageUrl="~/presentation/images/mail.png" /> Email:             
+                  <a href="mailto:vuphuonganh020497@gmail.com">Send a message!</a>
+            </section>
         </div>
-        <div class="col-2">
-            <h1>Contact Us:</h1>
-            <div class="phone">Phone:</div>
-            <a href="mailto:vuphuonganh020497@gmail.com">Send Email</a>
         </div>
     </form>
-        <footer>
-            <p>Copyright Phuong Anh Vu &copy; 2023 all rights reserved</p>
-               
+        
+</div>
+    <footer class="bg-primary mt-4">
+            <p class="text-light py-4 mb-0">Copyright Phuong Anh Vu &copy; 2023 all rights reserved</p>   
         </footer>
- </div>
 </body>
 </html>
