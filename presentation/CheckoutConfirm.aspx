@@ -1,16 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckoutConfirm.aspx.cs" Inherits="Web460_Week_1.presentation.CheckOutConfirm" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Order Confirmation</title>
-    <link href="../Content/bootstrap-grid.css" rel="stylesheet" />
-    <link href="../Content/bootstrap.css" rel="stylesheet" />
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div class="row">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/presentation/Default.Master" AutoEventWireup="true" CodeBehind="CheckoutConfirm.aspx.cs" Inherits="Web460_Week_1.presentation.CheckoutConfirm" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="pageImage" runat="server">
+    <asp:Image runat="server" Width="100px" CssClass="img-fluid" ImageUrl="~/presentation/images/orderSuccess.jpg" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="pageInformation" runat="server">
+    <h2>Thank you for your order!</h2>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="mainContent" runat="server">
+      <div class="row">
             <div class="col-2">
                 <asp:Label ID="labelCustomer" runat="server" Text="Customer Name"></asp:Label>
             </div>
@@ -56,6 +54,5 @@
         <div class="col-md-4" style="text-align: left">
               <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
          </div>
-    </form>
-</body>
-</html>
+
+</asp:Content>

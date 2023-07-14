@@ -8,7 +8,7 @@ using Web460_Week_1.business;
 
 namespace Web460_Week_1.presentation
 {
-    public partial class Checkoutaspx : System.Web.UI.Page
+    public partial class CheckOut : System.Web.UI.Page
     {
         public String FirstName
         {
@@ -16,7 +16,7 @@ namespace Web460_Week_1.presentation
         }
         public String LastName
         {
-            get { return txtLastName.Text;}
+            get { return txtLastName.Text; }
         }
         public String Email
         {
@@ -68,14 +68,10 @@ namespace Web460_Week_1.presentation
                 return aPerson;
             }
         }
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if(Page.IsValid)
+            if (Page.IsValid)
             {
                 Session["person"] = this.getPersonInformation;
                 Response.Redirect("~/presentation/CheckoutConfirm.aspx");

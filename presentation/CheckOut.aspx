@@ -1,17 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CheckOutaspx.aspx.cs" Inherits="Web460_Week_1.presentation.Checkoutaspx" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Checkout</title>
-    <link href="../Content/bootstrap-grid.css" rel="stylesheet" />
-    <link href="../Content/bootstrap.css" rel="stylesheet" />
-</head>
-<body>
-    <div class="container-fluid">
-        <form id="form1" runat="server" class="mt-3">
-            <div class="mb-3">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/presentation/Default.Master" AutoEventWireup="true" CodeBehind="CheckOut.aspx.cs" Inherits="Web460_Week_1.presentation.CheckOut" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="pageImage" runat="server">
+    <asp:Image runat="server" Width="100px" CssClass="img-fluid" ImageUrl="~/presentation/images/shoppingCart.png" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="pageInformation" runat="server">
+    <h2>Order Information</h2>
+    <p>Please complete the form and click subnmit!</p>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="mainContent" runat="server">
+       <div class="mb-3">
                 <asp:label ID="label" runat="server" Text="First Name"></asp:label>
                 <asp:TextBox ID="txtFistName" runat="server" Columns="50" ValidationGroup="person"></asp:TextBox>
             </div>
@@ -60,7 +58,4 @@
                 <asp:Button ID="btnSubmmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"/>
                 <asp:Button ID="btnClear" runat="server" Text="Cancel" />
             </div>
-            </form>
-    </div>
-</body>
-</html>
+</asp:Content>

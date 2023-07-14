@@ -8,12 +8,12 @@ using Web460_Week_1.business;
 
 namespace Web460_Week_1.presentation
 {
-    public partial class CheckOutConfirm : System.Web.UI.Page
+    public partial class CheckoutConfirm : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             Person aPerson;
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 try
                 {
@@ -30,7 +30,7 @@ namespace Web460_Week_1.presentation
                 catch (Exception ex)
                 {
                     lblStatus.Text = ex.Message;
-                    lblStatus.ForeColor = System.Drawing.Color.Red; 
+                    lblStatus.ForeColor = System.Drawing.Color.Red;
                 }
             }
         }
