@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WEB460_Bookstore.data;
 using Web460_Week_1.business;
 
 namespace Web460_Week_1.presentation
@@ -50,22 +51,22 @@ namespace Web460_Week_1.presentation
         {
             get { return txtCardNumber.Text; }
         }
-        public Person getPersonInformation
+        public Order getOrder
         {
             get
             {
-                Person aPerson = new Person();
-                aPerson.FirstName = this.FirstName;
-                aPerson.LastName = this.LastName;
-                aPerson.Email = this.Email;
-                aPerson.Phone = this.Phone;
-                aPerson.Address1 = this.Address1;
-                aPerson.Address2 = this.Address2;
-                aPerson.City = this.City;
-                aPerson.State = this.State;
-                aPerson.CreditCard = this.CreditCard;
-                aPerson.CreditCardNumber = this.CreditCardNumber;
-                return aPerson;
+                Order aOrder = new Order();
+                aOrder.FirstName = this.FirstName;
+                aOrder.LastName = this.LastName;
+                aOrder.Email = this.Email;
+                aOrder.Phone = this.Phone;
+                aOrder.Address1 = this.Address1;
+                aOrder.Address2 = this.Address2;
+                aOrder.City = this.City;
+                aOrder.State = this.State;
+                aOrder.CreditCard = this.CreditCard;
+                aOrder.CreditCardNumber = this.CreditCardNumber;
+                return aOrder;
             }
         }
 
@@ -73,8 +74,16 @@ namespace Web460_Week_1.presentation
         {
             if (Page.IsValid)
             {
-                Session["person"] = this.getPersonInformation;
-                Response.Redirect("~/presentation/CheckoutConfirm.aspx");
+                Order theOrder = this.getOrder;
+                if(OrderData.saveOrder(theOrder))
+                {
+                    Session["order"] = theOrder;
+                }
+                else
+                {
+                    Session["order"] = null;
+                }
+                Response.Redirect("~/presentation/CheckOutConfirm.aspx");
             }
         }
     }

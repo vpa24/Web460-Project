@@ -12,17 +12,17 @@ namespace Web460_Week_1.presentation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Person aPerson;
+            Order aOrder;
             if (!IsPostBack)
             {
                 try
                 {
-                    aPerson = (Person)Session["person"];
-                    lblName.Text = aPerson.FullName;
-                    lblEmail.Text = aPerson.Email;
-                    lblPhone.Text = aPerson.Phone;
-                    txtAddress.Text = aPerson.FullAddress;
-                    lblCreditCard.Text = aPerson.CreditCardInformation;
+                    aOrder = (Order)Session["order"];
+                    lblName.Text = aOrder.FullName;
+                    lblEmail.Text = aOrder.Email;
+                    lblPhone.Text = aOrder.Phone;
+                    txtAddress.Text = aOrder.FullAddress;
+                    lblCreditCard.Text = aOrder.CreditCardInformation;
 
                     lblStatus.Text = "All good";
                     lblStatus.ForeColor = System.Drawing.Color.Black;

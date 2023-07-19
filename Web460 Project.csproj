@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Bookstore.mdf" />
+    <Content Include="App_Data\Bookstore_log.ldf">
+      <DependentUpon>Bookstore.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -102,7 +106,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="business\Person.cs" />
+    <Compile Include="App_Data\DataParent.cs" />
+    <Compile Include="App_Data\OrderData.cs" />
+    <Compile Include="business\Order.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

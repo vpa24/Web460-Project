@@ -6,8 +6,9 @@ using System.Web;
 
 namespace Web460_Week_1.business
 {
-    public class Person
+    public class Order
     {
+        public int ID { get; set; }
         public String FirstName { get; set; }
         public String LastName { get; set; }
         public String FullName 
