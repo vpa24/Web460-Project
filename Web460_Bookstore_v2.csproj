@@ -89,9 +89,9 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="index.aspx" />
+    <Content Include="presentation\EmployeeInformation.aspx" />
     <Content Include="presentation\CheckOut.aspx" />
     <Content Include="presentation\CheckoutConfirm.aspx" />
-    <Content Include="presentation\EmployeeInformation.aspx" />
     <Content Include="presentation\images\checkout.png" />
     <Content Include="presentation\images\home.png" />
     <Content Include="presentation\images\mail.png" />
@@ -120,6 +120,13 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="presentation\EmployeeInformation.aspx.cs">
+      <DependentUpon>EmployeeInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="presentation\EmployeeInformation.aspx.designer.cs">
+      <DependentUpon>EmployeeInformation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="presentation\CheckOut.aspx.cs">
       <DependentUpon>CheckOut.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,13 +147,6 @@
     </Compile>
     <Compile Include="presentation\Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
-    </Compile>
-    <Compile Include="presentation\EmployeeInformation.aspx.cs">
-      <DependentUpon>EmployeeInformation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="presentation\EmployeeInformation.aspx.designer.cs">
-      <DependentUpon>EmployeeInformation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

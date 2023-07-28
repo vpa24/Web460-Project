@@ -34,6 +34,12 @@
                 Checkout
             </asp:HyperLink>
         </li>
+          <li class="nav-item">
+            <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/presentation/EmployeeInformation.aspx">
+                <asp:Image runat="server" Width="20px" CssClass="img-fluid" ImageUrl="~/presentation/images/employee-icon.png" />
+                Employee Information
+            </asp:HyperLink>
+        </li>
       </ul>
     </div>
   </div>
