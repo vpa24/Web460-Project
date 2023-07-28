@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace Web460_Week_1.business
+namespace Web460_Bookstore_v2.business
 {
     public class Order
     {

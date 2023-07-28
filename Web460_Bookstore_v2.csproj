@@ -87,9 +87,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="index.aspx" />
     <Content Include="presentation\CheckOut.aspx" />
     <Content Include="presentation\CheckoutConfirm.aspx" />
+    <Content Include="presentation\EmployeeInformation.aspx" />
     <Content Include="presentation\images\checkout.png" />
     <Content Include="presentation\images\home.png" />
     <Content Include="presentation\images\mail.png" />
@@ -106,9 +108,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Data\DataParent.cs" />
-    <Compile Include="App_Data\OrderData.cs" />
+    <Compile Include="business\Employee.cs" />
     <Compile Include="business\Order.cs" />
+    <Compile Include="data\DataParent.cs" />
+    <Compile Include="data\EmployeeData.cs" />
+    <Compile Include="data\OrderData.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,7 +141,19 @@
     <Compile Include="presentation\Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
+    <Compile Include="presentation\EmployeeInformation.aspx.cs">
+      <DependentUpon>EmployeeInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="presentation\EmployeeInformation.aspx.designer.cs">
+      <DependentUpon>EmployeeInformation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -164,6 +180,14 @@
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="presentation\Default.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -172,7 +196,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\" />
     <Folder Include="styles\" />
+    <Folder Include="Views\EmployeeData\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

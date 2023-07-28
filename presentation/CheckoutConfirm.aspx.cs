@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Web460_Week_1.business;
+using Web460_Bookstore_v2.business;
 
-namespace Web460_Week_1.presentation
+namespace Web460_Bookstore_v2.presentation
 {
     public partial class CheckoutConfirm : System.Web.UI.Page
     {

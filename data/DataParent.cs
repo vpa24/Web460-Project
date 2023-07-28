@@ -6,7 +6,7 @@ using System.Web;
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace WEB460_Bookstore.data
+namespace Web460_Bookstore_v2.data
 {
     public class DataParent
     {

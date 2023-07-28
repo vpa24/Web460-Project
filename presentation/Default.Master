@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.Master.cs" Inherits="Web460_Week_1.presentation.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.Master.cs" Inherits="Web460_Bookstore_v2.presentation.Site1" %>
 
 <!DOCTYPE html>
 

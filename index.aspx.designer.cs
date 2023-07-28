@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Web460_Week_1
+namespace Web460_Bookstore_v2
 {
 
 
