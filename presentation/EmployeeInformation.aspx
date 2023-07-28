@@ -51,8 +51,8 @@
        <div class="mb-3">
                 <asp:label ID="label1" runat="server" Text="Security Level"></asp:label>
            <asp:RadioButtonList ID="radSecurityLevel" runat="server">
-               <asp:ListItem>Administrator</asp:ListItem>
-               <asp:ListItem>Business User</asp:ListItem>
+               <asp:ListItem Value="A">Administrator</asp:ListItem>
+               <asp:ListItem Value="B">Business User</asp:ListItem>
            </asp:RadioButtonList>
             </div>
             <div class="mb-3">
