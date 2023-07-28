@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Data.SqlClient;
 using Web460_Bookstore_v2.business;
 
@@ -17,7 +20,7 @@ namespace Web460_Bookstore_v2.data
             cmd.Parameters.Add("id", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
             cmd.Parameters.Add("firstName", System.Data.SqlDbType.VarChar).Value = aEmployee.FirstName;
             cmd.Parameters.Add("lastName", System.Data.SqlDbType.VarChar).Value = aEmployee.LastName;
-            cmd.Parameters.Add("phone", System.Data.SqlDbType.VarChar).Value = aEmployee.Phone;
+            cmd.Parameters.Add("phone", System.Data.SqlDbType.VarChar).Value = aEmployee.Phone; 
             cmd.Parameters.Add("email", System.Data.SqlDbType.VarChar).Value = aEmployee.Email;
             cmd.Parameters.Add("hireDate", System.Data.SqlDbType.VarChar).Value = aEmployee.HireDate;
             cmd.Parameters.Add("securityLevel", System.Data.SqlDbType.VarChar).Value = aEmployee.SecurityLevel;

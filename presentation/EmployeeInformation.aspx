@@ -56,7 +56,7 @@
            </asp:RadioButtonList>
             </div>
             <div class="mb-3">
-                <asp:Button ID="btnSubmmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"/>
+                <asp:Button ID="btnSubmmit" runat="server" Text="Submit" OnClick="btnSubmit"/>
                 <asp:Button ID="btnClear" runat="server" Text="Cancel" />
             </div>
             <div class="mb-3">

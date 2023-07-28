@@ -11,7 +11,7 @@ namespace Web460_Week_1.presentation
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
-        protected void btnSubmit_Click(object sender, EventArgs e)
+        protected void btnSubmit(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
@@ -34,7 +34,6 @@ namespace Web460_Week_1.presentation
                     lblStatus.Text = aEmployee.FullName + " NOT saved.";
                     lblStatus.CssClass = "error";
                 }
-                Response.Redirect("~/presentation/CheckOutConfirm.aspx");
             }
         }
     }

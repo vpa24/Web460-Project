@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Web;
 
 namespace Web460_Bookstore_v2.business
 {
@@ -8,8 +11,8 @@ namespace Web460_Bookstore_v2.business
         public int ID { get; set; }
         public String FirstName { get; set; }
         public String LastName { get; set; }
-        public String FullName
-        {
+        public String FullName 
+        { 
             get { return this.FirstName + " " + this.LastName; }
         }
         public String Email
@@ -24,7 +27,7 @@ namespace Web460_Bookstore_v2.business
             {
                 StringBuilder str = new StringBuilder();
                 str.AppendLine(this.Address1);
-                if (!string.IsNullOrEmpty(this.Address2))
+                if(!string.IsNullOrEmpty(this.Address2))
                 {
                     str.AppendLine(this.Address2);
                 }
@@ -32,10 +35,10 @@ namespace Web460_Bookstore_v2.business
                 return str.ToString();
             }
         }
-        public String City { get; set; }
+        public String City { get; set;}
         public String State { get; set; }
         public String PaymentMethod { get; set; }
-        public String CreditCard { get; set; }
+        public String CreditCard { get; set;}
         public String CreditCardNumber { get; set; }
         public String CreditCardInformation
         {

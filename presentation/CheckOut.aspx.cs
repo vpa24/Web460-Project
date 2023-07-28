@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
-using Web460_Bookstore_v2.business;
+using System.Web.UI.WebControls;
 using Web460_Bookstore_v2.data;
+using Web460_Bookstore_v2.business;
 
 namespace Web460_Bookstore_v2.presentation
 {
@@ -71,7 +75,7 @@ namespace Web460_Bookstore_v2.presentation
             if (Page.IsValid)
             {
                 Order theOrder = this.getOrder;
-                if (OrderData.saveOrder(theOrder))
+                if(OrderData.saveOrder(theOrder))
                 {
                     Session["order"] = theOrder;
                 }
