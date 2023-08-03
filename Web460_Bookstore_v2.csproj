@@ -92,13 +92,18 @@
     <Content Include="presentation\EmployeeInformation.aspx" />
     <Content Include="presentation\CheckOut.aspx" />
     <Content Include="presentation\CheckoutConfirm.aspx" />
+    <Content Include="presentation\EmployeeList.aspx" />
     <Content Include="presentation\images\checkout.png" />
+    <Content Include="presentation\images\EmployeeList.png" />
+    <Content Include="presentation\images\EmployeeListIcon.png" />
     <Content Include="presentation\images\home.png" />
+    <Content Include="presentation\images\login.png" />
     <Content Include="presentation\images\mail.png" />
     <Content Include="presentation\images\orderSuccess.jpg" />
     <Content Include="presentation\images\phone.png" />
     <Content Include="presentation\images\shoppingCart.png" />
     <Content Include="presentation\images\xPpAf9MPR6Z8MUexKDEU_Problem_solving_concept.png" />
+    <Content Include="presentation\Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -113,6 +118,7 @@
     <Compile Include="data\DataParent.cs" />
     <Compile Include="data\EmployeeData.cs" />
     <Compile Include="data\OrderData.cs" />
+    <Compile Include="data\UserLoginData.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,12 +147,26 @@
     <Compile Include="presentation\CheckoutConfirm.aspx.designer.cs">
       <DependentUpon>CheckoutConfirm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="presentation\Default.Master.cs">
-      <DependentUpon>Default.Master</DependentUpon>
+    <Compile Include="presentation\DefaultMaster.Master.cs">
+      <DependentUpon>DefaultMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="presentation\Default.Master.designer.cs">
-      <DependentUpon>Default.Master</DependentUpon>
+    <Compile Include="presentation\DefaultMaster.Master.designer.cs">
+      <DependentUpon>DefaultMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="presentation\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="presentation\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -179,7 +199,7 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="presentation\Default.Master" />
+    <Content Include="presentation\DefaultMaster.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

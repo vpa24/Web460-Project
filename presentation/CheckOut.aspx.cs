@@ -69,6 +69,11 @@ namespace Web460_Bookstore_v2.presentation
                 return aOrder;
             }
         }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            (this.Master as DefaultMaster).setNavigation();
+            (this.Master as DefaultMaster).checkSecurityLevel("B");
+        }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {

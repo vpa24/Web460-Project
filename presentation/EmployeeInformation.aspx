@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/presentation/Default.Master" AutoEventWireup="true" CodeBehind="EmployeeInformation.aspx.cs" Inherits="Web460_Week_1.presentation.EmployeeInformation" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/presentation/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="EmployeeInformation.aspx.cs" Inherits="Web460_Bookstore_v2.presentation.EmployeeInformation" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="pageImage" runat="server">

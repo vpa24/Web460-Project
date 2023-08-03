@@ -11,7 +11,7 @@ namespace Web460_Bookstore_v2.presentation
 {
 
 
-    public partial class Site1
+    public partial class DefaultMaster
     {
 
         /// <summary>
