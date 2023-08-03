@@ -19,6 +19,16 @@
                 <asp:TextBox ID="txtLastName" name="txtLastName" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
        <asp:RequiredFieldValidator cssClass="error" ID="lastNameValidator" runat="server" ControlToValidate="txtLastName" ErrorMessage="Last name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
             </div>
+        <div class="mb-3">
+                <asp:label ID="label4" runat="server" Text="Username"></asp:label>
+                <asp:TextBox ID="txtUsername" name="txtUserName" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
+       <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUserName" ErrorMessage="User name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            </div>
+            <div class="mb-3">
+                <asp:label ID="label9" runat="server" Text="Password"></asp:label>
+                <asp:TextBox ID="txtPassword" name="txtPassword" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
+       <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            </div>
             <div class="mb-3">
                 <asp:label ID="label8" runat="server" Text="Email"></asp:label>
                 <asp:TextBox ID="txtEmail" name="txtEmail" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>

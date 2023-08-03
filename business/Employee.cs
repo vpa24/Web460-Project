@@ -23,6 +23,8 @@ namespace Web460_Bookstore_v2.business
         public DateTime HireDate { get; set; }
 
         public String SecurityLevel { get; set; }
+        public String UserName { get; set; }
+        public String Password { get; set; }
 
         public override string ToString()
         {

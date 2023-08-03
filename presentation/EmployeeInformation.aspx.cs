@@ -22,7 +22,8 @@ namespace Web460_Week_1.presentation
                 aEmployee.Phone = txtPhone.Text;
                 aEmployee.HireDate = Convert.ToDateTime(calStartDate.SelectedDate.ToShortDateString());
                 aEmployee.SecurityLevel = radSecurityLevel.SelectedValue;
-
+                aEmployee.UserName = txtUsername.Text;
+                aEmployee.Password = txtPassword.Text;
                 lblStatus.Visible = true;
                 if (EmployeeData.saveEmployee(aEmployee))
                 {
