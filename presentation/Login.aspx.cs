@@ -27,7 +27,7 @@ namespace Web460_Bookstore_v2.presentation
             {
                 Session["employee"] = aEmployee;
                 e.Authenticated = true;
-                Response.Redirect("~/presentation/index.aspx");
+                Response.Redirect("~/index.aspx");
             }
             else
             {

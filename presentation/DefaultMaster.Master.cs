@@ -12,13 +12,13 @@ namespace Web460_Bookstore_v2.presentation
     {
         public void enableAdmin(Boolean enable)
         {
-            // liEmp.Visible = enable;
-            // liManage.Visible = enable;
+            liEmp.Visible = enable;
+            liManage.Visible = enable;
         }
         public void enableBusiness(Boolean enable)
         {
-            // liIndex.Visible = enable;
-            // liCheckout.Visible = enable;
+            liIndex.Visible = enable;
+            liCheckout.Visible = enable;
             enableAdmin(false);
         }
         public void enableNaviation(Boolean enable)
