@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Web460_Bookstore_v2.presentation;
 
 namespace Web460_Bookstore_v2
 {
@@ -11,7 +12,7 @@ namespace Web460_Bookstore_v2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            (this.Master as DefaultMaster).setNavigation();
         }
     }
 }
