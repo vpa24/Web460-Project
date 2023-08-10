@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.Services.Description;
 using System.Web.UI;
 using Web460_Bookstore_v2.business;
 using Web460_Bookstore_v2.data;
@@ -27,17 +28,33 @@ namespace Web460_Bookstore_v2.presentation
                 aEmployee.HireDate = Convert.ToDateTime(calStartDate.SelectedDate.ToShortDateString());
                 aEmployee.SecurityLevel = radSecurityLevel.SelectedValue;
                 aEmployee.UserName = txtUsername.Text;
-                aEmployee.Password = txtPassword.Text;
-                lblStatus.Visible = true;
-                if (EmployeeData.saveEmployee(aEmployee))
+                string passWord = txtPassword.Text;
+                string message = String.Empty;
+                Boolean validPassword = PasswordHelpers.ValidatePassword(passWord, out message);   
+                if (validPassword)
                 {
-                    lblStatus.Text = aEmployee.FullName + " saved.";
-                    lblStatus.CssClass = "no error";
+                    lblPasswordError.Visible = false;
+                    lblStatus.Visible = true;
+                    aEmployee.Password = passWord;
+                    if (EmployeeData.saveEmployee(aEmployee))
+                    {
+                        lblStatus.Text = aEmployee.FullName + " saved.";
+                        lblStatus.CssClass = "no error";
+                    }
+                    else
+                    {
+                        String errMsg = aEmployee.FullName + " NOT saved.";
+                        if(!String.IsNullOrEmpty(message))
+                        {
+                            errMsg += ": " + message;
+                        }
+                        lblStatus.CssClass = "error";
+                    }
                 }
                 else
                 {
-                    lblStatus.Text = aEmployee.FullName + " NOT saved.";
-                    lblStatus.CssClass = "error";
+                    lblPasswordError.Visible = true;
+                    lblPasswordError.Text = message;
                 }
             }
         }

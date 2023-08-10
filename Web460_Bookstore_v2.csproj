@@ -115,6 +115,7 @@
   <ItemGroup>
     <Compile Include="business\Employee.cs" />
     <Compile Include="business\Order.cs" />
+    <Compile Include="business\PasswordHelpers.cs" />
     <Compile Include="data\DataParent.cs" />
     <Compile Include="data\EmployeeData.cs" />
     <Compile Include="data\OrderData.cs" />
