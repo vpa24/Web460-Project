@@ -14,5 +14,10 @@ namespace Web460_Bookstore_v2.presentation
             (this.Master as DefaultMaster).setNavigation();
             (this.Master as DefaultMaster).checkSecurityLevel("A");
         }
+
+        protected void Unnamed2_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }
