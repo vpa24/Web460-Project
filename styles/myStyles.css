@@ -136,3 +136,13 @@ section ul > li:before {
     font-weight: bold;
     font-style: italic;
 }
+
+.textBox {
+    width: 100%;
+}
+.smallTextBox {
+    width: 30px;
+}
+.mediumTextBox{
+    width: 120px;
+}
