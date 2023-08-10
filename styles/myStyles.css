@@ -1,148 +1,157 @@
 ﻿body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    background-image: url("../presentation/images/bg_page.png");
-    background-repeat: repeat-x;
-    background-color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background-image: url("../presentation/images/bg_page.png");
+  background-repeat: repeat-x;
+  background-color: #fff;
 }
 
 .columnLabel {
-    margin-right: 10px;
-    font-weight: bold;
-    color: navy;
+  margin-right: 10px;
+  font-weight: bold;
+  color: navy;
 }
 
 .inputRow {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 2em;
-    color: navy;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 2em;
+  color: navy;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h2 {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: navy;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: navy;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .siteFooter {
-    margin-top:1em;
-    background-color:#000080;
-    padding: .5em;
-    font-size: .75em;
-    line-height: 1em;
-    color:#ffffff;
+  margin-top: 1em;
+  background-color: #000080;
+  padding: 0.5em;
+  font-size: 0.75em;
+  line-height: 1em;
+  color: #ffffff;
 }
 .siteFooter hr {
-    border-top-color:#bbb;
-    opacity:0.5;
+  border-top-color: #bbb;
+  opacity: 0.5;
 }
 .copyRight {
-    align-content:center;
-    text-align:center;
-    margin-bottom:1em;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 1em;
 }
 .error {
-    color: #00CC66;
+  color: #00cc66;
 }
 footer {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: .75em;
-    text-transform: uppercase;
-    text-align: center;
-    color: #666666;
-    margin-left: 0px;
-    padding-left: 1em;
-    border-top: 1px solid #999;
-    clear: both;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #666666;
+  margin-left: 0px;
+  padding-left: 1em;
+  border-top: 1px solid #999;
+  clear: both;
 }
 
 footer p {
-    font-size: .75em;
-    text-align: center;
-    position: relative;
+  font-size: 0.75em;
+  text-align: center;
+  position: relative;
 }
-    footer img {
-        width: 32px;
-        height: 32px;
-    }
+footer img {
+  width: 32px;
+  height: 32px;
+}
 
 .jumbotron {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    color: #ffffff;
-    background-color: #000080;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  background-color: #000080;
 }
 
-    .jumbotron h1,
-    .jumbotron .h1 {
-        color: inherit;
-        font-size: 2em;
-        border-bottom: none;
-    }
+.jumbotron h1,
+.jumbotron .h1 {
+  color: inherit;
+  font-size: 2em;
+  border-bottom: none;
+}
 
-    .jumbotron p {
-        color: inherit;
-        margin-bottom: 15px;
-        font-size: 1.25em;
-        font-weight: 200;
-    }
+.jumbotron p {
+  color: inherit;
+  margin-bottom: 15px;
+  font-size: 1.25em;
+  font-weight: 200;
+}
 
 @media (min-width: 576px) {
-    .jumbotron {
-        padding: 4rem 2rem;
-    }
+  .jumbotron {
+    padding: 4rem 2rem;
+  }
 }
 /* module styles */
 section {
-    border: 1px solid #000080;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 1em;
-    height:auto;
+  border: 1px solid #000080;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 1em;
+  height: auto;
 }
 section ul > li {
-    list-style: none;
+  list-style: none;
 }
 
 section ul > li:before {
-    content: "\25BA"; /* unicode right pointing arrow */
-    display: block;
-    float: left;
-    width: 1.2em;
-    color: #000080;
+  content: "\25BA"; /* unicode right pointing arrow */
+  display: block;
+  float: left;
+  width: 1.2em;
+  color: #000080;
 }
 
 .footerImage {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .signature {
-    color: navy;
-    font-weight: bold;
-    font-style: italic;
+  color: navy;
+  font-weight: bold;
+  font-style: italic;
 }
 .highlight {
-    font-weight: bold;
-    font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .textBox {
-    width: 100%;
+  width: 100%;
 }
 .smallTextBox {
-    width: 30px;
+  width: 30px;
 }
-.mediumTextBox{
-    width: 120px;
+.mediumTextBox {
+  width: 120px;
+}
+
+.commandButton {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: Highllight;
+  color: #fff !important;
 }

@@ -38,11 +38,11 @@
       <asp:GridView ID="grdEmployees" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="+" ForeColor="#333333" GridLines="None">
           <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
-              <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+              <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ControlStyle-CssClass="commandButton" />
               <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
               <asp:TemplateField HeaderText="First Name" SortExpression="firstName">
                   <EditItemTemplate>
-                      <asp:TextBox ID="txtFirstName" runat="server" Text='<%# Bind("firstName") %>'></asp:TextBox>
+                      <asp:TextBox ID="txtFirstName" CssClass="mediumTextBox" runat="server" Text='<%# Bind("firstName") %>'></asp:TextBox>
                       <asp:RequiredFieldValidator cssClass="error" ID="firstNameValidator" runat="server" ControlToValidate="txtFirstName" ErrorMessage="First name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
                   </EditItemTemplate>
                   <ItemTemplate>
