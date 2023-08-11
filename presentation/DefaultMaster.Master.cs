@@ -48,8 +48,21 @@ namespace Web460_Bookstore_v2.presentation
         }
         public void checkSecurityLevel(string requiredLevel)
         {
+            Boolean reject = true;
             Employee aEmployee = (Employee)Session["employee"];
-            if (!String.Equals(requiredLevel, aEmployee.SecurityLevel))
+            if (aEmployee == null)
+            {
+                reject = true;
+            }
+            else if (String.Equals(requiredLevel, "B") && String.Equals(aEmployee.SecurityLevel, "A"))
+            {
+                reject = false;
+            }
+            else if (String.Equals(requiredLevel, aEmployee.SecurityLevel))
+            {
+                reject = false;
+            }
+            if (reject)
             {
                 Response.End();
             }
