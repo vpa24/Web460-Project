@@ -104,7 +104,7 @@
                 <EditItemTemplate>
                     <asp:TextBox ID="txtSecLevel" runat="server" Text='<%# Bind("securityLevel") %>' CssClass="smallTextBox"></asp:TextBox>
                       <asp:RequiredFieldValidator CssClass="error" ID="reqSecLevel" runat="server" ControlToValidate="txtSecLevel" ErrorMessage="Please check the Sevurity Level"></asp:RequiredFieldValidator>
-                      <asp:RegularExpressionValidator CssClass="error" ID="secValidator" runat="server" ControlToValidate="txtSecLevel"
+                      <asp:RegularExpressionValidator CssClass="error" ID="secValidator" runat="server" ControlToValidate="txtSecLevel" ValidationGroup="personel" 
                           ValidationExpression="AB" Display="Dynamic"></asp:RegularExpressionValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
