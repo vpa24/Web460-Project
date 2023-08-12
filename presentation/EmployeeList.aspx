@@ -114,11 +114,11 @@
             <asp:TemplateField HeaderText="Hire Date" SortExpression="hireDate">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtHireDate" runat="server" Text='<%# Bind("hireDate", "{0:MM/dd/yyyy}") %>' CssClass="mediumTextBox" ></asp:TextBox>
-                      <asp:RequiredFieldValidator ID="hireReq" runat="server"
+                      <asp:RegularExpressionValidator ID="hireReq" runat="server"
                           ControlToValidate="txtHireDate" CssClass="error" Display="Dynamic" 
                           ErrorMessage="Date must be in format mm/dd/yyyy (e.g 8/10/2023)"
                           ValidationGroup="personel" ValidationExpression="\d{1,2}\/d{1,2}\/d{4}$">
-                      </asp:RequiredFieldValidator>
+                      </asp:RegularExpressionValidator>
                       <asp:RequiredFieldValidator CssClass="error" ID="reqHire" runat="server"
                           ControlToValidate="txtHireDate" ErrorMessage="Hire date is requrired"
                           ValidationGroup="personel" Display="Dynamic"></asp:RequiredFieldValidator>
