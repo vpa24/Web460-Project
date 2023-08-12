@@ -30,7 +30,7 @@ namespace Web460_Bookstore_v2.presentation
                 aEmployee.UserName = txtUsername.Text;
                 string passWord = txtPassword.Text;
                 string message = String.Empty;
-                Boolean validPassword = PasswordHelpers.ValidatePassword(passWord, out message);   
+                Boolean validPassword = PasswordHelpers.ValidatePassword(passWord, out message);
                 if (validPassword)
                 {
                     lblPasswordError.Visible = false;
@@ -44,7 +44,7 @@ namespace Web460_Bookstore_v2.presentation
                     else
                     {
                         String errMsg = aEmployee.FullName + " NOT saved.";
-                        if(!String.IsNullOrEmpty(message))
+                        if (!String.IsNullOrEmpty(message))
                         {
                             errMsg += ": " + message;
                         }

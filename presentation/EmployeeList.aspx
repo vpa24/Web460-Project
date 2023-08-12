@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/presentation/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="EmployeeList.aspx.cs" Inherits="Web460_Bookstore_v2.presentation.EmployeeList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/presentation/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="EmployeeList.aspx.cs" Inherits="Web460_Bookstore_v2.presentation.EmployeeList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="pageImage" runat="server">
@@ -39,37 +39,37 @@
         <Columns>
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-           <asp:TemplateField HeaderText="User Name" SortExpression="username">
+              <asp:TemplateField HeaderText="User Name" SortExpression="username">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtUserName" runat="server" Text='<%# Bind("username") %>' CssClass="mediumTextBox"></asp:TextBox>
                        <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUserName" ErrorMessage="User name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="Label5" runat="server" Text='<%# Bind("username") %>'></asp:Label>
+                    <asp:Label ID="Label7" runat="server" Text='<%# Bind("username") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Password" SortExpression="password">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtPassword" runat="server" Text='<%# Bind("password") %>' CssClass="mediumTextBox"></asp:TextBox>
-                    <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtPassword" runat="server" Text='<%# Bind("password") %>'></asp:TextBox>
+                      <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
-                      <asp:Label ID="lblPassword" runat="server" Text='*************'></asp:Label>
+                    <asp:Label ID="Label8" runat="server" Text='<%# Bind("password") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="First Name" SortExpression="firstName">
-                 <EditItemTemplate>
-                     <asp:TextBox ID="txtFirstName" runat="server" Text='<%# Bind("firstName") %>' CssClass="mediumTextBox"></asp:TextBox>
-                     <asp:RequiredFieldValidator cssClass="error" ID="firstNameValidator" runat="server" ControlToValidate="txtFirstName" ErrorMessage="First name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                 </EditItemTemplate>
-                 <ItemTemplate>
-                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("firstName") %>'></asp:Label>
-                 </ItemTemplate>
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtFirstName" runat="server" Text='<%# Bind("firstName") %>' CssClass="mediumTextBox"></asp:TextBox>
+                      <asp:RequiredFieldValidator cssClass="error" ID="firstNameValidator" runat="server" ControlToValidate="txtFirstName" ErrorMessage="First name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>  
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("firstName") %>'></asp:Label>
+                </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Last Name" SortExpression="lastName">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtLastName" runat="server" Text='<%# Bind("lastName") %>' CssClass="mediumTextBox"></asp:TextBox>
-                     <asp:RequiredFieldValidator cssClass="error" ID="lastNameValidator" runat="server" ControlToValidate="txtLastName" ErrorMessage="Last name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator cssClass="error" ID="lastNameValidator" runat="server" ControlToValidate="txtLastName" ErrorMessage="Last name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="Label2" runat="server" Text='<%# Bind("lastName") %>'></asp:Label>
@@ -90,41 +90,42 @@
             <asp:TemplateField HeaderText="Phone" SortExpression="phone">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtPhone" runat="server" Text='<%# Bind("phone") %>' CssClass="mediumTextBox"></asp:TextBox>
-                    <asp:RequiredFieldValidator cssClass="error" ID="reqPhone" runat="server" ControlToValidate="txtPhone" ErrorMessage="Phone is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                     <asp:RequiredFieldValidator cssClass="error" ID="reqPhone" runat="server" ControlToValidate="txtPhone" ErrorMessage="Phone is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      <asp:RegularExpressionValidator cssClass="error" ID="phoneValidator" runat="server" ControlToValidate="txtPhone"
                          ErrorMessage="Enter a 10 digit phone number" ValidationGroup="personnel"
                          ValidationExpression="^[0-9]{10}$">
                         </asp:RegularExpressionValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lblPhone" runat="server" Text='<%# Bind("phone") %>'></asp:Label>
+                    <asp:Label ID="Label4" runat="server" Text='<%# Bind("phone") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Sec Level" SortExpression="securityLevel">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtSecLevel" runat="server" Text='<%# Bind("securityLevel") %>' CssClass="smallTextBox"></asp:TextBox>
                       <asp:RequiredFieldValidator CssClass="error" ID="reqSecLevel" runat="server" ControlToValidate="txtSecLevel" ErrorMessage="Please check the Sevurity Level"></asp:RequiredFieldValidator>
-                      <asp:RegularExpressionValidator CssClass="error" ID="secValidator" runat="server" ControlToValidate="txtSecLevel" ValidationGroup="personel" 
-                          ValidationExpression="AB" Display="Dynamic"></asp:RegularExpressionValidator>
+                      <asp:RegularExpressionValidator CssClass="error" ID="secValidator" runat="server" ControlToValidate="txtSecLevel"
+                          ValidationExpression="AB" ValidationGroup="personel"  Display="Dynamic"></asp:RegularExpressionValidator>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="Label4" runat="server" Text='<%# Bind("securityLevel") %>'></asp:Label>
+                    <asp:Label ID="Label5" runat="server" Text='<%# Bind("securityLevel") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Hire Date" SortExpression="hireDate">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtHireDate" runat="server" Text='<%# Bind("hireDate", "{0:MM/dd/yyyy}") %>' CssClass="mediumTextBox" ></asp:TextBox>
-                      <asp:RegularExpressionValidator ID="hireReq" runat="server"
+                    <asp:TextBox ID="txtHireDate" runat="server" Text='<%# Bind("hireDate", "{0:MM/dd/yyyy}") %>'></asp:TextBox>
+                   <asp:RequiredFieldValidator ID="hireReq" runat="server"
                           ControlToValidate="txtHireDate" CssClass="error" Display="Dynamic" 
                           ErrorMessage="Date must be in format mm/dd/yyyy (e.g 8/10/2023)"
                           ValidationGroup="personel" ValidationExpression="\d{1,2}\/d{1,2}\/d{4}$">
-                      </asp:RegularExpressionValidator>
+                      </asp:RequiredFieldValidator>
                       <asp:RequiredFieldValidator CssClass="error" ID="reqHire" runat="server"
                           ControlToValidate="txtHireDate" ErrorMessage="Hire date is requrired"
                           ValidationGroup="personel" Display="Dynamic"></asp:RequiredFieldValidator>
-                </EditItemTemplate>
+                    </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="Label6" runat="server" Text='<%# Bind("hireDate", "{0:MM/dd/yyyy}") %>' ></asp:Label>
+                    <asp:Label ID="lblHireDate" runat="server" Text='<%# Bind("hireDate", "{0:MM/dd/yyyy}") %>'></asp:Label>
+                </EditItemTemplate>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

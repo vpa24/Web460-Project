@@ -28,7 +28,7 @@
                 <asp:label ID="label9" runat="server" Text="Password"></asp:label>
                 <asp:TextBox ID="txtPassword" name="txtPassword" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
                 <asp:Label ID="lblPasswordError" runat="server" Text="" CssClass="error" Visible="false"></asp:Label>
-       <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
             </div>
             <div class="mb-3">
                 <asp:label ID="label8" runat="server" Text="Email"></asp:label>
