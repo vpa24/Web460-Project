@@ -35,7 +35,8 @@
             <asp:Parameter Name="Id" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:GridView CssClass="table table-hover table-bordered" ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+      <asp:label runat="server" ID="lblSuccess" Visible="false"></asp:label>
+    <asp:GridView CssClass="table table-hover table-bordered" ID="grdEmployees" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnRowUpdating="grdEmployees_RowUpdating">
         <Columns>
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
@@ -51,11 +52,12 @@
             <asp:TemplateField HeaderText="Password" SortExpression="password">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtPassword" runat="server" Text='<%# Bind("password") %>'></asp:TextBox>
-                      <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                     <asp:RequiredFieldValidator cssClass="error" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:Label ID="lblStatus" runat="server" Visible="false"></asp:Label>
                 </EditItemTemplate>
-                <ItemTemplate>
-                    <asp:Label ID="Label8" runat="server" Text='<%# Bind("password") %>'></asp:Label>
-                </ItemTemplate>
+            <ItemTemplate>
+                    <asp:Label ID="Label8" runat="server" Text='********'></asp:Label>
+            </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="First Name" SortExpression="firstName">
                 <EditItemTemplate>
@@ -125,9 +127,8 @@
                     </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="lblHireDate" runat="server" Text='<%# Bind("hireDate", "{0:MM/dd/yyyy}") %>'></asp:Label>
-                </EditItemTemplate>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-      </asp:Content>
+ </asp:Content>
