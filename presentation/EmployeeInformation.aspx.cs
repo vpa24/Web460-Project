@@ -48,7 +48,7 @@ namespace Web460_Bookstore_v2.presentation
                         {
                             errMsg += ": " + message;
                         }
-                        lblStatus.CssClass = "error";
+                        lblStatus.CssClass = "text-danger";
                     }
                 }
                 else

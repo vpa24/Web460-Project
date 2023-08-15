@@ -104,6 +104,7 @@
     <Content Include="presentation\images\shoppingCart.png" />
     <Content Include="presentation\images\xPpAf9MPR6Z8MUexKDEU_Problem_solving_concept.png" />
     <Content Include="presentation\Login.aspx" />
+    <Content Include="presentation\LogoutTest.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -168,6 +169,13 @@
     </Compile>
     <Compile Include="presentation\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\LogoutTest.aspx.cs">
+      <DependentUpon>LogoutTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="presentation\LogoutTest.aspx.designer.cs">
+      <DependentUpon>LogoutTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

@@ -18,6 +18,7 @@ namespace Web460_Bookstore_v2.presentation
         public void enableBusiness(Boolean enable)
         {
             liIndex.Visible = enable;
+            liLogout.Visible = enable;
             liCheckout.Visible = enable;
             enableAdmin(false);
         }

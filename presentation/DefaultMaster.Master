@@ -45,6 +45,12 @@
                 Employee List
             </asp:HyperLink>
         </li>
+        <li class="nav-item" runat="server" id="liLogout">
+            <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/presentation/LogoutTest.aspx">
+                <asp:Image runat="server" Width="20px" CssClass="img-fluid" ImageUrl="~/presentation/images/logout.png" />
+                Log Out
+            </asp:HyperLink>
+        </li>
       </ul>
     </div>
   </div>

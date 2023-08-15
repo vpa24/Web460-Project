@@ -60,6 +60,15 @@ namespace Web460_Bookstore_v2.presentation
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liManage;
 
         /// <summary>
+        /// liLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liLogout;
+
+        /// <summary>
         /// pageImage control.
         /// </summary>
         /// <remarks>
