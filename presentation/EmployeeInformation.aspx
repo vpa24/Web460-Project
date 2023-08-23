@@ -11,31 +11,31 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="mainContent" runat="server">
     <div class="mb-3">
               <asp:label ID="label" runat="server" Text="First Name"></asp:label>
-                <asp:TextBox ID="txtFirstName" name="txtFirstName" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
-                <asp:RequiredFieldValidator CssClass="text-danger" ID="firstNameValidator" runat="server" ControlToValidate="txtFirstName" ErrorMessage="First name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
-        </div>    
+                <asp:TextBox ID="txtFirstName" name="txtFirstName" runat="server"  CssClass="textBox"></asp:TextBox>
+        <asp:RequiredFieldValidator runat="server" id="firstNameValidator" controltovalidate="txtFirstName" errormessage="First name is required" CssClass="text-danger" SetFocusOnError="True"/>    
+    </div>    
         <div class="mb-3">
                 <asp:label ID="label2" runat="server" Text="Last Name"></asp:label>
-                <asp:TextBox ID="txtLastName" name="txtLastName" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
-       <asp:RequiredFieldValidator CssClass="text-danger" ID="lastNameValidator" runat="server" ControlToValidate="txtLastName" ErrorMessage="Last name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="txtLastName" name="txtLastName" runat="server"  CssClass="textBox"></asp:TextBox>
+       <asp:RequiredFieldValidator CssClass="text-danger" ID="lastNameValidator" runat="server" ControlToValidate="txtLastName" errormessage="Last name is required" SetFocusOnError="True"></asp:RequiredFieldValidator>
             </div>
         <div class="mb-3">
                 <asp:label ID="label4" runat="server" Text="Username"></asp:label>
-                <asp:TextBox ID="txtUsername" name="txtUserName" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
-       <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUserName" ErrorMessage="User name is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="txtUsername" name="txtUserName" runat="server"  CssClass="textBox"></asp:TextBox>
+       <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUserName" ErrorMessage="User name is required"  SetFocusOnError="True"></asp:RequiredFieldValidator>
             </div>
             <div class="mb-3">
                 <asp:label ID="label9" runat="server" Text="Password"></asp:label>
-                <asp:TextBox ID="txtPassword" name="txtPassword" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" name="txtPassword" runat="server"  CssClass="textBox"></asp:TextBox>
                 <asp:Label ID="lblPasswordError" runat="server" Text="" CssClass="text-danger" Visible="false"></asp:Label>
-                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required"  SetFocusOnError="True"></asp:RequiredFieldValidator>
             </div>
             <div class="mb-3">
                 <asp:label ID="label8" runat="server" Text="Email"></asp:label>
-                <asp:TextBox ID="txtEmail" name="txtEmail" runat="server" ValidationGroup="personnel" CssClass="textBox"></asp:TextBox>
-       <asp:RequiredFieldValidator CssClass="text-danger" ID="EmailValidator" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="txtEmail" name="txtEmail" runat="server"  CssClass="textBox"></asp:TextBox>
+       <asp:RequiredFieldValidator CssClass="text-danger" ID="EmailValidator" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is required"  SetFocusOnError="True"></asp:RequiredFieldValidator>
     <asp:RegularExpressionValidator CssClass="text-danger" ID="emailFormat" runat="server" ControlToValidate="txtEmail"
-        ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ErrorMessage = "Invalid email address"  ValidationGroup="personnel">
+        ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ErrorMessage = "Invalid email address"  >
     </asp:RegularExpressionValidator>
                 </div>
 
@@ -43,7 +43,7 @@
                 <asp:label ID="label7" runat="server" Text="Phone"></asp:label>
                 <asp:TextBox ID="txtPhone" runat="server" Columns="50"></asp:TextBox>
                 <asp:RegularExpressionValidator CssClass="text-danger" ID="phoneValidator" runat="server" ControlToValidate="txtPhone"
-                 ErrorMessage="Enter a 10 digit phone number" ValidationGroup="personnel"
+                 ErrorMessage="Enter a 10 digit phone number" 
                  ValidationExpression="^[0-9]{10}$">
                 </asp:RegularExpressionValidator>
             </div>
