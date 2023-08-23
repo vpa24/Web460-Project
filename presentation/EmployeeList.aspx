@@ -51,7 +51,7 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Password" SortExpression="password">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtPassword" runat="server" Text=''></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" Text='<%# Bind("password") %>'></asp:TextBox>
                      <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="personnel" SetFocusOnError="True"></asp:RequiredFieldValidator>
                     <asp:Label ID="lblStatus" runat="server" Visible="false"></asp:Label>
                 </EditItemTemplate>
