@@ -41,7 +41,8 @@
 
             <div class="mb-3">
                 <asp:label ID="label7" runat="server" Text="Phone"></asp:label>
-                <asp:TextBox ID="txtPhone" runat="server" Columns="50"></asp:TextBox>
+                <asp:TextBox ID="txtPhone" runat="server" CssClass="textBox"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPhone" errormessage="Phone is required" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator CssClass="text-danger" ID="phoneValidator" runat="server" ControlToValidate="txtPhone"
                  ErrorMessage="Enter a 10 digit phone number" 
                  ValidationExpression="^[0-9]{10}$">
