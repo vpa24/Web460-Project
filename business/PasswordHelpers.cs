@@ -44,7 +44,7 @@ namespace Web460_Bookstore_v2.business
                 }
                 if (!hasSymbols.IsMatch(input))
                 {
-                    msg.AppendLine("<br />Password should contain At least one special case characters");
+                    msg.AppendLine("<br />Password should contain At least one special case character");
                 }
                 else
                 {
