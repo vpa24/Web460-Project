@@ -36,8 +36,11 @@
         </UpdateParameters>
     </asp:SqlDataSource>
       <asp:label runat="server" ID="lblSuccess" Visible="false"></asp:label>
-    <asp:GridView CssClass="table table-hover table-bordered" ID="grdEmployees" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnRowUpdating="grdEmployees_RowUpdating">
-        <Columns>
+    <asp:GridView CssClass="table table-hover table-bordered" ID="grdEmployees" runat="server"
+    AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id"
+    DataSourceID="SqlDataSource1" OnRowUpdating="grdEmployees_RowUpdating"
+    OnRowDataBound="grdEmployees_RowDataBound">
+    <Columns>
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
               <asp:TemplateField HeaderText="User Name" SortExpression="username">

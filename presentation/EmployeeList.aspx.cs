@@ -15,6 +15,20 @@ namespace Web460_Bookstore_v2.presentation
             (this.Master as DefaultMaster).setNavigation();
             (this.Master as DefaultMaster).checkSecurityLevel("A");
         }
+        protected void grdEmployees_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow && (e.Row.RowState & DataControlRowState.Edit) > 0)
+            {
+                // Find the Password TextBox control in edit mode
+                TextBox txtPassword = (TextBox)e.Row.FindControl("txtPassword");
+
+                if (txtPassword != null)
+                {
+                    // Clear the Password field
+                    txtPassword.Text = string.Empty;
+                }
+            }
+        }
 
         protected void grdEmployees_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
