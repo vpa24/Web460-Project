@@ -9,7 +9,7 @@ namespace Web460_Bookstore_v2.presentation
     {
         public String FirstName
         {
-            get { return txtFistName.Text; }
+            get { return txtFirstName.Text; }
         }
         public String LastName
         {

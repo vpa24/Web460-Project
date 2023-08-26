@@ -11,15 +11,18 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="mainContent" runat="server">
        <div class="mb-3">
                 <asp:label ID="label" runat="server" Text="First Name"></asp:label>
-                <asp:TextBox ID="txtFistName" runat="server" Columns="50" ValidationGroup="person"></asp:TextBox>
+                <asp:TextBox ID="txtFirstName" runat="server" Columns="50" ValidationGroup="person"></asp:TextBox>
+               <asp:RequiredFieldValidator runat="server" id="firstNameValidator" controltovalidate="txtFirstName" errormessage="First name is required" CssClass="text-danger" SetFocusOnError="True"/>    
             </div>
             <div class="mb-3">
                 <asp:label ID="label2" runat="server" Text="Last Name"></asp:label>
                 <asp:TextBox ID="txtLastName" runat="server" Columns="50" ValidationGroup="person"></asp:TextBox>
+                  <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator1" controltovalidate="txtLastName" errormessage="Last name is required" CssClass="text-danger" SetFocusOnError="True"/>    
             </div>
             <div class="mb-3">
                 <asp:label ID="label3" runat="server" Text="Address Line 1"></asp:label>
                 <asp:TextBox ID="txtLine1" runat="server" Columns="50" ValidationGroup="person"></asp:TextBox>
+                  <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator2" controltovalidate="txtLine1" errormessage="Address is required" CssClass="text-danger" SetFocusOnError="True"/>    
             </div>
             <div class="mb-3">
                 <asp:label ID="label4" runat="server" Text="Address Line 2"></asp:label>
@@ -28,18 +31,22 @@
             <div class="mb-3">
                 <asp:label ID="label5" runat="server" Text="City"></asp:label>
                 <asp:TextBox ID="txtCity" runat="server" Columns="50" ValidationGroup="person"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator3" controltovalidate="txtCity" errormessage="City is required" CssClass="text-danger" SetFocusOnError="True"/>    
             </div>
             <div class="mb-3">
                 <asp:label ID="label6" runat="server" Text="State"></asp:label>
                 <asp:TextBox ID="txtState" runat="server" Columns="50" ValidationGroup="person"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator4" controltovalidate="txtState" errormessage="State is required" CssClass="text-danger" SetFocusOnError="True"/>    
             </div>
             <div class="mb-3">
                 <asp:label ID="label7" runat="server" Text="Phone #"></asp:label>
                 <asp:TextBox ID="txtPhone" runat="server" Columns="50"></asp:TextBox>
+                 <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator5" controltovalidate="txtPhone" errormessage="Phone is required" CssClass="text-danger" SetFocusOnError="True"/>    
             </div>
             <div class="mb-3">
                 <asp:label ID="label8" runat="server" Text="Email"></asp:label>
                 <asp:TextBox ID="txtEmail" runat="server" Columns="50" ValidationGroup="person"></asp:TextBox>
+                 <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator6" controltovalidate="txtEmail" errormessage="Email is required" CssClass="text-danger" SetFocusOnError="True"/>    
             </div>
             <div class="mb-3 form-check">
                <asp:label ID="label9" runat="server" Text="Credit Card"></asp:label>
