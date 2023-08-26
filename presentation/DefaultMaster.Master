@@ -66,14 +66,14 @@
 </div>
     <form id="mainForm" runat="server">
         <div class="row mt-1">
-            <div class="col-10">
+            <div class="col">
                 <section >
                     <asp:ContentPlaceHolder ID="mainContent" runat="server">
                     </asp:ContentPlaceHolder>
                 </section>
             </div>
-          <div class="col-2 px-0">
-            <section>
+          <div class="col-2 px-0" runat="server" id="ContactUsSection">
+            <section> 
                 <h1>Contact Us:</h1>
                 <div class="phone">
                     <asp:Image runat="server" Width="20px" CssClass="img-fluid" ImageUrl="~/presentation/images/phone.png" /> Phone:<a href="tel:9168799983">916-879-9983</a></div>
