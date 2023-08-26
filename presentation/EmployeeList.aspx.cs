@@ -19,12 +19,10 @@ namespace Web460_Bookstore_v2.presentation
         {
             if (e.Row.RowType == DataControlRowType.DataRow && (e.Row.RowState & DataControlRowState.Edit) > 0)
             {
-                // Find the Password TextBox control in edit mode
                 TextBox txtPassword = (TextBox)e.Row.FindControl("txtPassword");
 
                 if (txtPassword != null)
                 {
-                    // Clear the Password field
                     txtPassword.Text = string.Empty;
                 }
             }

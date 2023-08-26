@@ -12,21 +12,15 @@ namespace Web460_Bookstore_v2.presentation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Get the current page's file name
             string currentPage = System.IO.Path.GetFileName(Request.Url.AbsolutePath);
-
-            // Specify the page where you don't want to display the "Contact Us" section
             string excludedPage = "EmployeeList.aspx";
 
-            // Check if the current page is the excluded page
             if (!string.Equals(currentPage, excludedPage, StringComparison.OrdinalIgnoreCase))
             {
-                // Show the "Contact Us" section
                 ContactUsSection.Visible = true;
             }
             else
             {
-                // Hide the "Contact Us" section
                 ContactUsSection.Visible = false;
             }
         }
