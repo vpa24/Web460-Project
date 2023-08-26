@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Web460_Bookstore_v2.business;
 using Web460_Bookstore_v2.data;
@@ -34,5 +30,5 @@ namespace Web460_Bookstore_v2.presentation
                 e.Authenticated = false;
             }
         }
-        }
+    }
 }

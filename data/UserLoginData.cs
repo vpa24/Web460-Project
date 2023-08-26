@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data.SqlClient;
 using Web460_Bookstore_v2.business;
 
@@ -12,7 +9,7 @@ namespace Web460_Bookstore_v2.data
         public static void VerifyUser(Employee user)
         {
             String level;
-            SqlDataReader reader  = null;
+            SqlDataReader reader = null;
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "VerifyUser";
@@ -51,8 +48,8 @@ namespace Web460_Bookstore_v2.data
                     reader.Close();
                 }
             }
- 
+
         }
-   
+
     }
 }

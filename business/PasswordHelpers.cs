@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Web;
 
 
 namespace Web460_Bookstore_v2.business
@@ -31,7 +28,7 @@ namespace Web460_Bookstore_v2.business
             {
                 if (!hasLowerChar.IsMatch(input))
                 {
-                    msg.Append("Password should contain At least one lower case letter");        
+                    msg.Append("Password should contain At least one lower case letter");
                 }
                 if (!hasUpperChar.IsMatch(input))
                 {

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Text;
-using System.Web;
 
 namespace Web460_Bookstore_v2.business
 {
@@ -18,8 +15,8 @@ namespace Web460_Bookstore_v2.business
         }
         public String Email { get; set; }
         public String Phone { get; set; }
-        
-        [DataType(DataType.Date)] 
+
+        [DataType(DataType.Date)]
         public DateTime HireDate { get; set; }
 
         public String SecurityLevel { get; set; }
@@ -33,8 +30,8 @@ namespace Web460_Bookstore_v2.business
             str.AppendLine(FirstName + " " + LastName);
             str.AppendLine("Email: " + Email);
             str.AppendLine("Phone: " + Phone);
-            str.AppendLine("Hire Date: " +  HireDate.ToString("MM/dd/yyyy"));
-            str.AppendLine("Security Level: " +  SecurityLevel);   
+            str.AppendLine("Hire Date: " + HireDate.ToString("MM/dd/yyyy"));
+            str.AppendLine("Security Level: " + SecurityLevel);
 
             return str.ToString();
         }
